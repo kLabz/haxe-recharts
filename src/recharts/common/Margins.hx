@@ -1,13 +1,13 @@
 package recharts.common;
 
 typedef VerticalMargins = {
-	@:optional var top:Int;
-	@:optional var bottom:Int;
+	@:optional var top:Float;
+	@:optional var bottom:Float;
 }
 
 typedef HorizontalMargins = {
-	@:optional var left:Int;
-	@:optional var right:Int;
+	@:optional var left:Float;
+	@:optional var right:Float;
 }
 
 typedef Margins = {

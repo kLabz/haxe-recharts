@@ -13,10 +13,10 @@ typedef LegendProps<TValue, TID> = {
 	> DefaultLegendContentProps<TValue, TID>,
 
 	@:optional var wrapperStyle:CSSProperties;
-	@:optional var chartWidth:Int;
-	@:optional var chartHeight:Int;
-	@:optional var width:Int;
-	@:optional var height:Int;
+	@:optional var chartWidth:Float;
+	@:optional var chartHeight:Float;
+	@:optional var width:Float;
+	@:optional var height:Float;
 	@:optional var margin:Margins;
 	@:optional var payloadUniqBy:UniqueOption<TValue, TID>;
 	@:optional var onBBoxUpdate:?DOMRect->Void;

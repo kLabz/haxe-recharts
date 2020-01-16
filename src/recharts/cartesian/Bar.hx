@@ -46,9 +46,9 @@ typedef BarProps = ForcedOverride<PresentationAttributesFor<PathElement>, {
 	@:optional var xAxisId:StringOrInt;
 	@:optional var yAxisId:StringOrInt;
 	@:optional var stackId:StringOrInt;
-	@:optional var barSize:Int;
-	@:optional var unit:StringOrInt;
-	@:optional var name:StringOrInt;
+	@:optional var barSize:Float;
+	@:optional var unit:StringOrFloat;
+	@:optional var name:StringOrFloat;
 	@:optional var dataKey:DataKey<Any>;
 	@:optional var tooltipType:TooltipType;
 	@:optional var legendType:LegendType;

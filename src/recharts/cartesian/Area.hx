@@ -33,8 +33,8 @@ typedef AreaProps = {
 	@:optional var className:String;
 	@:optional var dataKey:DataKey<Any>;
 	@:optional var type:AreaType;
-	@:optional var unit:StringOrInt;
-	@:optional var name:StringOrInt;
+	@:optional var unit:StringOrFloat;
+	@:optional var name:StringOrFloat;
 	@:optional var xAxisId:StringOrInt;
 	@:optional var yAxisId:StringOrInt;
 	@:optional var stackId:StringOrInt;

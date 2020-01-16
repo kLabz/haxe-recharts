@@ -24,7 +24,7 @@ typedef LegendPayload<TValue, TID> = {
 
 typedef DefaultLegendContentProps<TValue, TID> = {
 	@:optional var content:LegendContentType<TValue, TID>;
-	@:optional var iconSize:Int;
+	@:optional var iconSize:Float;
 	@:optional var iconType:IconType;
 	@:optional var layout:LayoutType;
 	@:optional var align:HorizontalAlignmentType;

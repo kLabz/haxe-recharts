@@ -7,8 +7,8 @@ package recharts.cartesian;
 
 typedef ZAxisProps = {
 	@:optional var type:BaseAxisType;
-	@:optional var name:StringOrInt;
-	@:optional var unit:StringOrInt;
+	@:optional var name:StringOrFloat;
+	@:optional var unit:StringOrFloat;
 	@:optional var zAxisId:StringOrInt;
 	@:optional var dataKey:DataKey<Any>;
 	@:optional var range:Array<Float>;

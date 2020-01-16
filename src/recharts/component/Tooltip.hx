@@ -15,7 +15,7 @@ typedef TooltipProps<TValue:ValueType, TName:NameType> = {
 	@:optional var content:TooltipContentType<TValue, TName>;
 	@:optional var viewBox:ViewBox;
 	@:optional var active:Bool;
-	@:optional var offset:Int;
+	@:optional var offset:Float;
 	@:optional var wrapperStyle:CSSProperties;
 	@:optional var cursor:CursorDef;
 	@:optional var coordinate:Point;

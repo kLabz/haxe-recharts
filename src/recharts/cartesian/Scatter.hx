@@ -74,7 +74,7 @@ extern class Scatter<TData> extends ReactComponentOfProps<ScatterProps<TData>> {
 @:coreType abstract ScatterLine
 from ReactFragment from Any->SVGElement from CurveProps from Bool {}
 
-@:enum abstract ScatterLineType(String) {
+@:enum abstract ScatterLineType(String) #if recharts_enum_from_string from String #end {
 	var Fitting = 'fitting';
 	var Joint = 'joint';
 }

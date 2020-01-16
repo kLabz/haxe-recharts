@@ -47,7 +47,7 @@ typedef ErrorBarProps<TData> = {
 @:jsRequire('recharts', 'ErrorBar')
 extern class ErrorBar extends ReactComponentOfProps<ErrorBarProps> {}
 
-@:enum abstract XOrY(String) {
+@:enum abstract XOrY(String) #if recharts_enum_from_string from String #end {
 	var X = 'x';
 	var Y = 'y';
 }

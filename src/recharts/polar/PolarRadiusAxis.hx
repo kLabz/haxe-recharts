@@ -19,7 +19,7 @@ typedef PolarRadiusAxisProps = ForcedOverride<PresentationAttributes, {
 @:jsRequire('recharts', 'PolarRadiusAxis')
 extern class PolarRadiusAxis extends ReactComponentOfProps<PolarRadiusAxisProps> {}
 
-@:enum abstract PolarRadiusAxisOrientation(String) {
+@:enum abstract PolarRadiusAxisOrientation(String) #if recharts_enum_from_string from String #end {
 	var Left = 'left';
 	var Right = 'right';
 	var Middle = 'middle';

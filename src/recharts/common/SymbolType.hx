@@ -1,6 +1,6 @@
 package recharts.common;
 
-@:enum abstract SymbolType(String) {
+@:enum abstract SymbolType(String) #if recharts_enum_from_string from String #end {
 	var Circle = 'circle';
 	var Cross = 'cross';
 	var Diamond = 'diamond';

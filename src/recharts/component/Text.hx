@@ -17,7 +17,7 @@ typedef TextProps = ForcedOverride<PresentationAttributes, {
 @:jsRequire('recharts', 'Text')
 extern class Text extends ReactComponentOfProps<TextProps> {}
 
-@:enum abstract TextAnchor(String) {
+@:enum abstract TextAnchor(String) #if recharts_enum_from_string from String #end {
 	var Start = 'start';
 	var Middle = 'middle';
 	var End = 'end';

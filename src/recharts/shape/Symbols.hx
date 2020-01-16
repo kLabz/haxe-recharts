@@ -19,7 +19,7 @@ typedef SymbolsProps = ForcedOverride<PresentationAttributesFor<PathElement>, {
 @:jsRequire('recharts', 'Symbols')
 extern class Symbols extends ReactComponentOfProps<SymbolsProps> {}
 
-@:enum abstract SizeType(String) {
+@:enum abstract SizeType(String) #if recharts_enum_from_string from String #end {
 	var Area = 'area';
 	var Diameter = 'diameter';
 }

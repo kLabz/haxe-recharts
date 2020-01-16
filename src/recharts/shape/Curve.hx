@@ -23,7 +23,7 @@ typedef CurveProps = ForcedOverride<PresentationAttributesFor<PathElement>, {
 extern class Curve extends ReactComponentOfProps<CurveProps> {}
 
 @:coreType
-@:enum abstract CurveType from CurveFactory {
+@:enum abstract CurveType from CurveFactory #if recharts_enum_from_string from String #end {
 	var Basis = cast 'basis';
 	var BasisClosed = cast 'basisClosed';
 	var BasisOpen = cast 'basisOpen';

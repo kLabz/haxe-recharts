@@ -34,7 +34,7 @@ typedef TreemapProps<TData> = {
 @:jsRequire('recharts', 'Treemap')
 extern class Treemap<TData> extends ReactComponentOfProps<TreemapProps<TData>> {}
 
-@:enum abstract TreemapType(String) {
+@:enum abstract TreemapType(String) #if recharts_enum_from_string from String #end {
 	var Float = 'flat';
 	var Nest = 'nest';
 }

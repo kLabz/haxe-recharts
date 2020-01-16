@@ -23,7 +23,7 @@ typedef XAxisProps = {
 @:jsRequire('recharts', 'XAxis')
 extern class XAxis extends ReactComponentOfProps<XAxisProps> {}
 
-@:enum abstract XOrientation(String) {
+@:enum abstract XOrientation(String) #if recharts_enum_from_string from String #end {
 	var Bottom = 'bottom';
 	var Top = 'top';
 }

@@ -64,7 +64,7 @@ typedef AreaProps = ForcedOverride<PresentationAttributes, {
 @:jsRequire('recharts', 'Area')
 extern class Area extends ReactComponentOfProps<AreaProps> {}
 
-@:coreType @:enum abstract BaseValue from Float {
+@:coreType @:enum abstract BaseValue from Float #if recharts_enum_from_string from String #end {
 	var DataMin = cast 'dataMin';
 	var DataMax = cast 'dataMax';
 }

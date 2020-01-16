@@ -20,7 +20,7 @@ typedef PolarGridProps = ForcedOverride<PresentationAttributesFor<PathElement>, 
 @:jsRequire('recharts', 'PolarGrid')
 extern class PolarGrid extends ReactComponentOfProps<PolarGridProps> {}
 
-@:enum abstract PolarGridType(String) {
+@:enum abstract PolarGridType(String) #if recharts_enum_from_string from String #end {
 	var Polygon = 'polygon';
 	var Circle = 'circle';
 }

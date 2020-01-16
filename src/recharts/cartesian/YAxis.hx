@@ -23,7 +23,7 @@ typedef YAxisProps = {
 @:jsRequire('recharts', 'YAxis')
 extern class YAxis extends ReactComponentOfProps<YAxisProps> {}
 
-@:enum abstract YOrientation(String) {
+@:enum abstract YOrientation(String) #if recharts_enum_from_string from String #end {
 	var Left = 'left';
 	var Right = 'right';
 }

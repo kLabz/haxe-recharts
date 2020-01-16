@@ -23,12 +23,12 @@ typedef PolarAngleAxisProps = ForcedOverride<PresentationAttributesFor<TextEleme
 @:jsRequire('recharts', 'PolarAngleAxis')
 extern class PolarAngleAxis extends ReactComponentOfProps<PolarAngleAxisProps> {}
 
-@:enum abstract AxisLineType(String) {
+@:enum abstract AxisLineType(String) #if recharts_enum_from_string from String #end {
 	var Polygon = 'polygon';
 	var Circle = 'circle';
 }
 
-@:enum abstract PolarAngleAxisOrientation(String) {
+@:enum abstract PolarAngleAxisOrientation(String) #if recharts_enum_from_string from String #end {
 	var Inner = 'inner';
 	var Outer = 'outer';
 }

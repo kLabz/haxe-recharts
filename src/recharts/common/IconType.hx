@@ -1,6 +1,6 @@
 package recharts.common;
 
-@:enum abstract IconType(String) {
+@:enum abstract IconType(String) #if recharts_enum_from_string from String #end {
 	var Plainline = 'plainline';
 	var Line = 'line';
 	var Square = 'square';

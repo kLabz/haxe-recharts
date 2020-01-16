@@ -31,7 +31,7 @@ typedef BaseAxisProps = {
 	@:optional var AxisComp:ReactType;
 }
 
-@:enum abstract AxisType(String) {
+@:enum abstract AxisType(String) #if recharts_enum_from_string from String #end {
 	var XAxis = 'xAxis';
 	var YAxis = 'yAxis';
 	var AngleAxis = 'angleAxis';

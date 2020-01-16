@@ -5,8 +5,12 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/Area.tsx
 */
 
+import js.html.svg.SVGElement;
+
 import recharts.cartesian.XAxis.XAxisProps;
 import recharts.cartesian.YAxis.YAxisProps;
+import recharts.shape.Curve.CurveType;
+import recharts.shape.Dot.DotProps;
 
 private typedef XAxisPropsOverride = ForcedOverride<XAxisProps, {
 	var scale:D3Scale<StringOrFloat>;
@@ -26,13 +30,12 @@ typedef InternalAreaProps = {
 	@:optional var baseLine:BaseLine;
 }
 
-typedef AreaProps = {
-	> PresentationAttributes,
+typedef AreaProps = ForcedOverride<PresentationAttributes, {
 	> InternalAreaProps,
 
 	@:optional var className:String;
 	@:optional var dataKey:DataKey<Any>;
-	@:optional var type:AreaType;
+	@:optional var type:CurveType;
 	@:optional var unit:StringOrFloat;
 	@:optional var name:StringOrFloat;
 	@:optional var xAxisId:StringOrInt;
@@ -44,7 +47,7 @@ typedef AreaProps = {
 	@:optional var activeDot:AreaDot;
 	@:optional var dot:AreaDot;
 	@:optional var label:Any; // TODO
-	@:optional var layout:Layout;
+	@:optional var layout:LayoutType;
 	@:optional var hide:Bool;
 	@:optional var baseValue:BaseValue;
 	@:optional var isRange:Bool;
@@ -56,7 +59,7 @@ typedef AreaProps = {
 	@:optional var animationEasing:Easing;
 	@:optional var animationId:Int;
 	@:optional var id:String;
-}
+}>
 
 @:jsRequire('recharts', 'Area')
 extern class Area extends ReactComponentOfProps<AreaProps> {}
@@ -65,3 +68,6 @@ extern class Area extends ReactComponentOfProps<AreaProps> {}
 	var DataMin = cast 'dataMin';
 	var DataMax = cast 'dataMax';
 }
+
+@:coreType abstract AreaDot
+from ReactFragment from Any->SVGElement from DotProps from Bool {}

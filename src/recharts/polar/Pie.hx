@@ -21,8 +21,7 @@ typedef PieDef = {
 	@:optional var cornerRadius:StringOrFloat;
 }
 
-typedef PieProps<TData> = {
-	> PresentationAttributes,
+typedef PieProps<TData> = ForcedOverride<PresentationAttributes, {
 	> PieDef,
 
 	@:optional var animationId:Int;
@@ -43,9 +42,11 @@ typedef PieProps<TData> = {
 	@:optional var activeIndex:Any;
 	@:optional var animationEasing:Easing;
 	@:optional var isAnimationActive:Bool;
+	@:optional var onAnimationStart:Noop;
+	@:optional var onAnimationEnd:Noop;
 	@:optional var animationBegin:Int;
 	@:optional var animationDuration:Int;
-}
+}>
 
 @:jsRequire('recharts', 'Pie')
 extern class Pie<TData> extends ReactComponentOfProps<PieProps<TData>> {}

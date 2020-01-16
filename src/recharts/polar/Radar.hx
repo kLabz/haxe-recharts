@@ -26,6 +26,8 @@ typedef RadarProps = ForcedOverride<PresentationAttributes, {
 	@:optional var isAnimationActive:Bool;
 	@:optional var animationId:Int;
 	@:optional var animationEasing:Easing;
+	@:optional var onAnimationStart:Noop;
+	@:optional var onAnimationEnd:Noop;
 	@:optional var onMouseEnter:HandlerOrVoid<Any->MouseEvent<PolygonElement>->Void>;
 	@:optional var onMouseLeave:HandlerOrVoid<Any->MouseEvent<PolygonElement>->Void>;
 }>

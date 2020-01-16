@@ -22,6 +22,8 @@ typedef TreemapProps<TData> = {
 	@:optional var type:TreemapType;
 	@:optional var colorPanel:Array<String>;
 	@:optional var nestIndexContent:NestIndexContent;
+	@:optional var onAnimationStart:Noop;
+	@:optional var onAnimationEnd:Noop;
 	@:optional var isAnimationActive:Bool;
 	@:optional var isUpdateAnimationActive:Bool;
 	@:optional var animationBegin:Int;

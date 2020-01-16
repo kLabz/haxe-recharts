@@ -28,6 +28,8 @@ typedef RadialBarProps = ForcedOverride<PresentationAttributes, {
 	@:optional var tooltipType:TooltipType;
 	@:optional var hide:Bool;
 	@:optional var background:RadialBarBackground;
+	@:optional var onAnimationStart:Noop;
+	@:optional var onAnimationEnd:Noop;
 	@:optional var isAnimationActive:Bool;
 	@:optional var animationBegin:Int;
 	@:optional var animationDuration:Int;

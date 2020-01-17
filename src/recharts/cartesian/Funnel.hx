@@ -5,7 +5,6 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/Funnel.tsx
 */
 
-import haxe.extern.EitherType;
 import js.html.svg.SVGElement;
 
 import recharts.shape.Trapezoid.TrapezoidProps;

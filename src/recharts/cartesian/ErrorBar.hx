@@ -5,7 +5,6 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/ErrorBar.tsx
 */
 
-import haxe.extern.EitherType;
 import js.html.svg.LineElement;
 
 import recharts.cartesian.XAxis.XAxisProps;

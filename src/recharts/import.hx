@@ -10,12 +10,14 @@ import react.ReactRef;
 import react.ReactType;
 
 import react.types.DOMAttributes;
+import react.types.EitherType;
 import react.types.ForcedOverride;
 import react.types.Noise;
 import react.types.Noop;
 import react.types.ReactText;
 import react.types.Record;
-import react.types.SyntheticEvent;
+import react.types.event.ClassicHandler;
+import react.types.event.SyntheticEvent;
 import react.types.or.CallbackOrVoid;
 import react.types.or.DOMOrCallback;
 import react.types.or.FragmentOrCallback;

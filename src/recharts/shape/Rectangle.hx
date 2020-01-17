@@ -5,7 +5,6 @@ package recharts.shape;
 	https://github.com/recharts/recharts/blob/9a38bec/src/shape/Rectangle.tsx
 */
 
-import haxe.extern.EitherType;
 import js.html.svg.PathElement;
 
 typedef RectangleProps = ForcedOverride<PresentationAttributesFor<PathElement>, {

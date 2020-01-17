@@ -1,6 +1,6 @@
 package d3.scale;
 
-import haxe.extern.EitherType;
+import react.types.EitherType;
 
 typedef ReadonlyArray<T> = Array<T>;
 typedef FloatOrValueOf = EitherType<Float, ValueOf<Float>>;

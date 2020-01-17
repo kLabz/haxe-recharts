@@ -5,8 +5,6 @@ package recharts.component;
 	https://github.com/recharts/recharts/blob/9a38bec/src/component/Label.tsx
 */
 
-import haxe.extern.EitherType;
-
 typedef LabelProps = ForcedOverride<PresentationAttributes, {
 	@:optional var viewBox:EitherType<CartesianViewBox, PolarViewBox>;
 	@:optional var value:StringOrFloat;
@@ -18,6 +16,9 @@ typedef LabelProps = ForcedOverride<PresentationAttributes, {
 
 @:jsRequire('recharts', 'Label')
 extern class Label extends ReactComponentOfProps<LabelProps> {}
+
+typedef LabelContentType = EitherType<ReactFragment, LabelProps->ReactFragment>;
+typedef LabelFactory = EitherType<Bool, ReactFragment, LabelProps->ReactFragment, LabelProps>;
 
 @:coreType
 abstract LabelContentType from ReactFragment from LabelProps->ReactFragment {}

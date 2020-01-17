@@ -5,8 +5,6 @@ package recharts.component;
 	https://github.com/recharts/recharts/blob/9a38bec/src/component/DefaultTooltipContent.tsx
 */
 
-import haxe.extern.EitherType;
-
 typedef TooltipFormatter<TValue:ValueType, TName:NameType> = Any->TooltipPayload<TValue, TName>->Int->ReactFragment;
 
 typedef TooltipPayload<TValue:ValueType, TName:NameType> = {

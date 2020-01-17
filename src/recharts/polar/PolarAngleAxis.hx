@@ -5,7 +5,6 @@ package recharts.polar;
 	https://github.com/recharts/recharts/blob/9a38bec/src/polar/PolarAngleAxis.tsx
 */
 
-import haxe.extern.EitherType;
 import js.html.svg.TextElement;
 
 typedef PolarAngleAxisProps = ForcedOverride<PresentationAttributesFor<TextElement>, {

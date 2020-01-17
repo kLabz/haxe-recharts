@@ -5,7 +5,6 @@ package recharts.common;
 	https://github.com/recharts/recharts/blob/9a38bec/src/util/types.tsx
 */
 
-import haxe.extern.EitherType;
 import js.html.svg.LineElement;
 import js.html.svg.TextElement;
 
@@ -19,7 +18,7 @@ typedef BaseAxisProps<TickProps> = {
 	@:optional var axisLine:EitherType<Bool, PresentationAttributesFor<LineElement>>;
 	@:optional var tickLine:EitherType<Bool, PresentationAttributesFor<TextElement>>;
 	@:optional var tickSize:Float;
-	@:optional var tickFormatter:EitherType<Float, EitherType<String, Array<StringOrFloat>>>->String;
+	@:optional var tickFormatter:EitherType<Float, String, Array<StringOrFloat>>->String;
 	@:optional var allowDataOverflow:Bool;
 	@:optional var allowDuplicatedCategory:Bool;
 	@:optional var allowDecimals:Bool;

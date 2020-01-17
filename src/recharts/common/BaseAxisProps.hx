@@ -8,10 +8,13 @@ package recharts.common;
 import js.html.svg.LineElement;
 import js.html.svg.TextElement;
 
+import recharts.component.Label.LabelFactory;
+
 typedef BaseAxisProps<TickProps> = {
 	@:optional var type:BaseAxisType;
 	@:optional var dataKey:DataKey<Any>;
 	@:optional var hide:Bool;
+	@:optional var label:LabelFactory;
 	@:optional var scale:ScaleType;
 	@:optional var tick:AxisTick<TickProps>;
 	@:optional var tickCount:Int;

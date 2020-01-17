@@ -8,6 +8,7 @@ package recharts.polar;
 import js.html.svg.SVGElement;
 import js.html.svg.PathElement;
 
+import recharts.component.Label.LabelFactory;
 import recharts.shape.Sector.SectorProps;
 
 typedef PieDef = {
@@ -38,7 +39,7 @@ typedef PieProps<TData> = ForcedOverride<PresentationAttributes, {
 	@:optional var sectors:Array<PieSectorDataItem>;
 	@:optional var activeShape:PieActiveShape;
 	@:optional var labelLine:PieLabelLine;
-	@:optional var label:PieLabel;
+	@:optional var label:LabelFactory;
 	@:optional var activeIndex:Any;
 	@:optional var animationEasing:Easing;
 	@:optional var isAnimationActive:Bool;
@@ -57,9 +58,6 @@ from ReactFragment from Any->SVGElement from SectorProps {}
 @:coreType abstract PieLabelLine
 from ReactFragment from Any->SVGElement
 from PresentationAttributesFor<PathElement> from Bool {}
-
-@:coreType abstract PieLabel
-from ReactFragment from Any->SVGElement from {offsetRadius:Float} from Bool {}
 
 typedef PieSectorDataItem = ForcedOverride<SectorProps, {
 	@:optional var percent:Float;

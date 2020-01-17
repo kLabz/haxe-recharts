@@ -6,6 +6,7 @@ package recharts.polar;
 */
 
 import js.html.svg.PolygonElement;
+import recharts.component.Label.LabelFactory;
 import recharts.shape.Dot.DotProps;
 
 typedef RadarProps = ForcedOverride<PresentationAttributes, {
@@ -20,7 +21,7 @@ typedef RadarProps = ForcedOverride<PresentationAttributes, {
 	@:optional var legendType:LegendType;
 	@:optional var tooltipType:TooltipType;
 	@:optional var hide:Bool;
-	@:optional var label:Any; // Not typed upstream..
+	@:optional var label:LabelFactory;
 	@:optional var animationBegin:Int;
 	@:optional var animationDuration:Int;
 	@:optional var isAnimationActive:Bool;

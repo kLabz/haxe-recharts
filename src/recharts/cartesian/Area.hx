@@ -9,6 +9,7 @@ import js.html.svg.SVGElement;
 
 import recharts.cartesian.XAxis.XAxisProps;
 import recharts.cartesian.YAxis.YAxisProps;
+import recharts.component.Label.LabelFactory;
 import recharts.shape.Curve.CurveType;
 import recharts.shape.Dot.DotProps;
 
@@ -46,7 +47,7 @@ typedef AreaProps = ForcedOverride<PresentationAttributes, {
 	@:optional var connectNulls:Bool;
 	@:optional var activeDot:AreaDot;
 	@:optional var dot:AreaDot;
-	@:optional var label:Any; // TODO
+	@:optional var label:LabelFactory;
 	@:optional var layout:LayoutType;
 	@:optional var hide:Bool;
 	@:optional var baseValue:BaseValue;

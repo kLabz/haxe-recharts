@@ -8,8 +8,9 @@ package recharts.component;
 typedef LabelProps = ForcedOverride<PresentationAttributes, {
 	@:optional var viewBox:EitherType<CartesianViewBox, PolarViewBox>;
 	@:optional var value:StringOrFloat;
+	@:optional var angle:Float;
 	@:optional var offset:Float;
-	@:optional var position:Any; // TODO...
+	@:optional var position:LabelPosition;
 	@:optional var children:ReactFragment;
 	@:optional var content:LabelContentType;
 }>
@@ -21,7 +22,28 @@ typedef LabelContentType = EitherType<ReactFragment, LabelProps->ReactFragment>;
 typedef LabelFactory = EitherType<Bool, ReactFragment, LabelProps->ReactFragment, LabelProps>;
 
 @:coreType
-abstract LabelContentType from ReactFragment from LabelProps->ReactFragment {}
+@:enum abstract LabelPosition from Point #if recharts_enum_from_string from String #end {
+	var Top = cast 'top';
+	var Left = cast 'left';
+	var Right = cast 'right';
+	var Bottom = cast 'bottom';
+	var Inside = cast 'inside';
+	var Outside = cast 'outside';
+	var InsideLeft = cast 'insideLeft';
+	var InsideRight = cast 'insideRight';
+	var InsideTop = cast 'insideTop';
+	var InsideBottom = cast 'insideBottom';
+	var InsideTopLeft = cast 'insideTopLeft';
+	var InsideBottomLeft = cast 'insideBottomLeft';
+	var InsideTopRight = cast 'insideTopRight';
+	var InsideBottomRight = cast 'insideBottomRight';
+	var InsideStart = cast 'insideStart';
+	var InsideEnd = cast 'insideEnd';
+	var End = cast 'end';
+	var Center = cast 'center';
+	var CenterTop = cast 'centerTop';
+	var CenterBottom = cast 'centerBottom';
+}
 
 typedef CartesianViewBox = {
 	@:optional var x:Float;

@@ -9,7 +9,7 @@ import haxe.extern.EitherType;
 import js.html.svg.TextElement;
 
 typedef PolarAngleAxisProps = ForcedOverride<PresentationAttributesFor<TextElement>, {
-	> BaseAxisProps,
+	> BaseAxisProps<PolarAngleAxisTickProps>,
 
 	@:optional var angleAxisId:StringOrInt;
 	@:optional var cx:Float;
@@ -32,3 +32,10 @@ extern class PolarAngleAxis extends ReactComponentOfProps<PolarAngleAxisProps> {
 	var Inner = 'inner';
 	var Outer = 'outer';
 }
+
+typedef PolarAngleAxisTickProps = ForcedOverride<PolarAngleAxisProps, {
+	> Point,
+
+	var index:Int;
+	var payload:TickItem;
+}>

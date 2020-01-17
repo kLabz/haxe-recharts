@@ -5,8 +5,8 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/YAxis.tsx
 */
 
-typedef YAxisProps = {
-	> BaseAxisProps,
+typedef YAxisProps = ForcedOverride<PresentationAttributes, {
+	> BaseAxisProps<CartesianAxisTickProps>,
 
 	@:optional var yAxisId:StringOrInt;
 	@:optional var ticks:Array<StringOrFloat>;
@@ -18,7 +18,7 @@ typedef YAxisProps = {
 	@:optional var minTickGap:Float;
 	@:optional var interval:AxisInterval;
 	@:optional var reversed:Bool;
-}
+}>
 
 @:jsRequire('recharts', 'YAxis')
 extern class YAxis extends ReactComponentOfProps<YAxisProps> {}

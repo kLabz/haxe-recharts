@@ -26,7 +26,7 @@ typedef CartesianAxisProps = ForcedOverride<PresentationAttributes, {
 	@:optional var unit:StringOrFloat;
 	@:optional var orientation:Orientation;
 	@:optional var viewBox:ViewBox;
-	@:optional var tick:AxisTick;
+	@:optional var tick:AxisTick<CartesianAxisTickProps>;
 	@:optional var axisLine:EitherType<Bool, PresentationAttributesFor<LineElement>>;
 	@:optional var tickLine:EitherType<Bool, PresentationAttributesFor<TextElement>>;
 	@:optional var mirror:Bool;

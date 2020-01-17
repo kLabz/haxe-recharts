@@ -9,17 +9,17 @@ import haxe.extern.EitherType;
 import js.html.svg.LineElement;
 import js.html.svg.TextElement;
 
-typedef BaseAxisProps = {
+typedef BaseAxisProps<TickProps> = {
 	@:optional var type:BaseAxisType;
 	@:optional var dataKey:DataKey<Any>;
 	@:optional var hide:Bool;
 	@:optional var scale:ScaleType;
-	@:optional var tick:AxisTick;
+	@:optional var tick:AxisTick<TickProps>;
 	@:optional var tickCount:Int;
 	@:optional var axisLine:EitherType<Bool, PresentationAttributesFor<LineElement>>;
 	@:optional var tickLine:EitherType<Bool, PresentationAttributesFor<TextElement>>;
 	@:optional var tickSize:Float;
-	@:optional var tickFormatter:Any->String;
+	@:optional var tickFormatter:EitherType<Float, EitherType<String, Array<StringOrFloat>>>->String;
 	@:optional var allowDataOverflow:Bool;
 	@:optional var allowDuplicatedCategory:Bool;
 	@:optional var allowDecimals:Bool;

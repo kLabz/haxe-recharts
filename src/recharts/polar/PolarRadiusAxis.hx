@@ -6,7 +6,7 @@ package recharts.polar;
 */
 
 typedef PolarRadiusAxisProps = ForcedOverride<PresentationAttributes, {
-	> BaseAxisProps,
+	> BaseAxisProps<PolarRadiusAxisTickProps>,
 
 	@:optional var cx:Float;
 	@:optional var cy:Float;
@@ -24,3 +24,10 @@ extern class PolarRadiusAxis extends ReactComponentOfProps<PolarRadiusAxisProps>
 	var Right = 'right';
 	var Middle = 'middle';
 }
+
+typedef PolarRadiusAxisTickProps = ForcedOverride<PolarRadiusAxisProps, {
+	> Point,
+
+	var index:Int;
+	var payload:TickItem;
+}>

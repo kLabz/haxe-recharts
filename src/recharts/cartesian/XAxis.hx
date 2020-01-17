@@ -5,8 +5,8 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/XAxis.tsx
 */
 
-typedef XAxisProps = {
-	> BaseAxisProps,
+typedef XAxisProps = ForcedOverride<PresentationAttributes, {
+	> BaseAxisProps<CartesianAxisTickProps>,
 
 	@:optional var xAxisId:StringOrInt;
 	@:optional var width:Float;
@@ -18,7 +18,7 @@ typedef XAxisProps = {
 	@:optional var minTickGap:Float;
 	@:optional var interval:AxisInterval;
 	@:optional var reversed:Bool;
-}
+}>
 
 @:jsRequire('recharts', 'XAxis')
 extern class XAxis extends ReactComponentOfProps<XAxisProps> {}

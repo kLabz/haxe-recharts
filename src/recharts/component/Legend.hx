@@ -9,8 +9,8 @@ import js.html.DOMRect;
 import recharts.component.DefaultLegendContent.DefaultLegendContentProps;
 import recharts.component.DefaultLegendContent.LegendPayload;
 
-typedef LegendProps<TValue, TID> = {
-	> DefaultLegendContentProps<TValue, TID>,
+typedef LegendProps<TPayload, TValue, TID> = {
+	> DefaultLegendContentProps<TPayload, TValue, TID>,
 
 	@:optional var wrapperStyle:CSSProperties;
 	@:optional var chartWidth:Float;
@@ -18,14 +18,15 @@ typedef LegendProps<TValue, TID> = {
 	@:optional var width:Float;
 	@:optional var height:Float;
 	@:optional var margin:Margins;
-	@:optional var payloadUniqBy:UniqueOption<TValue, TID>;
+	@:optional var payloadUniqBy:UniqueOption<TPayload, TValue, TID>;
 	@:optional var onBBoxUpdate:?DOMRect->Void;
 }
 
 @:jsRequire('recharts', 'Legend')
-extern class Legend<TValue, TID>
-extends ReactComponentOfProps<LegendProps<TValue, TID>> {}
+extern class Legend<TPayload, TValue, TID>
+extends ReactComponentOfProps<LegendProps<TPayload, TValue, TID>> {}
 
-@:coreType
-private abstract UniqueOption<TValue, TID>
-from Bool from LegendPayload<TValue, TID>->Any {}
+private typedef UniqueOption<TPayload, TValue, TID> = EitherType<
+	LegendPayload<TPayload, TValue, TID>->Any, // TODO
+	Bool
+>;

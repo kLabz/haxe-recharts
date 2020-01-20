@@ -39,5 +39,4 @@ extern class Treemap<TData> extends ReactComponentOfProps<TreemapProps<TData>> {
 	var Nest = 'nest';
 }
 
-@:coreType abstract NestIndexContent
-from ReactFragment from Any->Int->ReactFragment {}
+typedef NestIndexContent = EitherType<ReactFragment, Any->Int->ReactFragment>;

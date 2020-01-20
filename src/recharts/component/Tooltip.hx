@@ -32,24 +32,24 @@ typedef TooltipProps<TValue:ValueType, TName:NameType> = {
 extern class Tooltip<TValue:ValueType, TName:NameType>
 extends ReactComponentOfProps<TooltipProps<TValue, TName>> {}
 
-@:coreType
-abstract TooltipContentType<TValue:ValueType, TName:NameType>
-from ReactFragment
-from TooltipProps<TValue, TName>->ReactFragment {}
+typedef TooltipContentType<TValue:ValueType, TName:NameType> = EitherType<
+	TooltipProps<TValue, TName>->ReactFragment,
+	ReactFragment
+>
 
 typedef EscapeViewBox = {
 	@:optional var x:Bool;
 	@:optional var y:Bool;
 }
 
-@:coreType
-abstract CursorDef from ReactFragment from CursorProps from Bool {}
+typedef CursorDef = EitherType<CursorProps, ReactFragment, Bool>;
 
 typedef CursorProps = {
 	var strokeDasharray:ReactText;
 	@:optional var stroke:String;
 }
 
-@:coreType
-private abstract UniqueOption<TValue:ValueType, TName:NameType>
-from Bool from TooltipPayload<TValue, TName>->Any {}
+private typedef UniqueOption<TValue:ValueType, TName:NameType> = EitherType<
+	TooltipPayload<TValue, TName>->Any, // TODO
+	Bool
+>;

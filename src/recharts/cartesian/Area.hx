@@ -5,8 +5,6 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/Area.tsx
 */
 
-import js.html.svg.SVGElement;
-
 import recharts.cartesian.XAxis.XAxisProps;
 import recharts.cartesian.YAxis.YAxisProps;
 import recharts.component.Label.LabelFactory;
@@ -70,5 +68,4 @@ extern class Area extends ReactComponentOfProps<AreaProps> {}
 	var DataMax = cast 'dataMax';
 }
 
-@:coreType abstract AreaDot
-from ReactFragment from Any->SVGElement from DotProps from Bool {}
+typedef AreaDot = EitherType<DotProps, ReactFragment, Any->ReactFragment, Bool>;

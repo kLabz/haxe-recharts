@@ -5,6 +5,7 @@ package recharts.polar;
 	https://github.com/recharts/recharts/blob/9a38bec/src/polar/RadialBar.tsx
 */
 
+import recharts.component.Label.LabelFactory;
 import recharts.shape.Sector.SectorProps;
 
 typedef RadialBarProps = ForcedOverride<PresentationAttributes, {
@@ -24,6 +25,7 @@ typedef RadialBarProps = ForcedOverride<PresentationAttributes, {
 	@:optional var minPointSize:Float;
 	@:optional var maxPointSize:Float;
 	@:optional var data:Array<RadialBarDataItem>;
+	@:optional var label:LabelFactory;
 	@:optional var legendType:LegendType;
 	@:optional var tooltipType:TooltipType;
 	@:optional var hide:Bool;
@@ -47,5 +49,9 @@ typedef RadialBarDataItem = {
 	@:optional var background:SectorProps;
 }
 
-@:coreType abstract RadialBarBackground
-from ReactFragment from RadialBarProps->ReactFragment from SectorProps from Bool {}
+typedef RadialBarBackground = EitherType<
+	SectorProps,
+	ReactFragment,
+	RadialBarProps->ReactFragment,
+	Bool
+>;

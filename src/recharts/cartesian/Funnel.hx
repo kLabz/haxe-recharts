@@ -5,8 +5,6 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/Funnel.tsx
 */
 
-import js.html.svg.SVGElement;
-
 import recharts.shape.Trapezoid.TrapezoidProps;
 
 typedef FunnelTrapezoidItem = {
@@ -46,5 +44,4 @@ typedef FunnelProps<TData> = ForcedOverride<TrapezoidProps, {
 @:jsRequire('recharts', 'Funnel')
 extern class Funnel<TData> extends ReactComponentOfProps<FunnelProps<TData>> {}
 
-@:coreType abstract TrapezoidType
-from ReactFragment from Any->SVGElement from TrapezoidProps {}
+typedef TrapezoidType = EitherType<TrapezoidProps, ReactFragment, Any->ReactFragment>;

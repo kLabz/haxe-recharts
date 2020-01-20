@@ -1,4 +1,3 @@
 package recharts.common;
 
-@:coreType
-abstract NameType from String from Float {}
+typedef NameType = StringOrFloat;

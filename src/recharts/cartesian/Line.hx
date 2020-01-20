@@ -68,5 +68,4 @@ typedef LineProps = ForcedOverride<CurveProps, {
 @:jsRequire('recharts', 'Line')
 extern class Line extends ReactComponentOfProps<LineProps> {}
 
-@:coreType abstract LineDot
-from ReactFragment from Any->SVGElement from DotProps from Bool {}
+typedef LineDot = EitherType<ReactFragment, Any->ReactFragment, DotProps, Bool>;

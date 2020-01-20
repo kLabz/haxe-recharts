@@ -5,7 +5,7 @@ package recharts.component;
 	https://github.com/recharts/recharts/blob/9a38bec/src/component/LabelList.tsx
 */
 
-import recharts.component.Label.LabelContentType;
+import recharts.component.Label;
 
 typedef BaseData = {
 	@:optional var value:ValueType;
@@ -13,6 +13,8 @@ typedef BaseData = {
 }
 
 typedef LabelListProps<TData:BaseData> = {
+	> LabelProps,
+
 	@:optional var id:String;
 	@:optional var data:Array<TData>;
 	@:optional var valueAccessor:TData->Int->Any;

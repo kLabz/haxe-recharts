@@ -47,5 +47,4 @@ typedef RadarPoint = {
 	@:optional var payload:Any;
 }
 
-@:coreType abstract RadarDot
-from ReactFragment from Any->ReactFragment from DotProps from Bool {}
+typedef RadarDot = EitherType<DotProps, ReactFragment, Any->ReactFragment, Bool>;

@@ -5,7 +5,6 @@ package recharts.polar;
 	https://github.com/recharts/recharts/blob/9a38bec/src/polar/Pie.tsx
 */
 
-import js.html.svg.SVGElement;
 import js.html.svg.PathElement;
 
 import recharts.component.Label.LabelFactory;
@@ -52,12 +51,14 @@ typedef PieProps<TData> = ForcedOverride<PresentationAttributes, {
 @:jsRequire('recharts', 'Pie')
 extern class Pie<TData> extends ReactComponentOfProps<PieProps<TData>> {}
 
-@:coreType abstract PieActiveShape
-from ReactFragment from Any->SVGElement from SectorProps {}
+typedef PieActiveShape = EitherType<SectorProps, ReactFragment, Any->ReactFragment>;
 
-@:coreType abstract PieLabelLine
-from ReactFragment from Any->SVGElement
-from PresentationAttributesFor<PathElement> from Bool {}
+typedef PieLabelLine = EitherType<
+	PresentationAttributesFor<PathElement>,
+	ReactFragment,
+	Any->ReactFragment, // TODO: type Any
+	Bool
+>;
 
 typedef PieSectorDataItem = ForcedOverride<SectorProps, {
 	@:optional var percent:Float;

@@ -5,7 +5,6 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/CartesianGrid.tsx
 */
 
-import js.html.svg.SVGElement;
 import js.html.svg.LineElement;
 import recharts.cartesian.XAxis.XAxisProps;
 import recharts.cartesian.YAxis.YAxisProps;
@@ -46,6 +45,9 @@ typedef CartesianGridProps = ForcedOverride<PresentationAttributes, {
 @:jsRequire('recharts', 'CartesianGrid')
 extern class CartesianGrid extends ReactComponentOfProps<CartesianGridProps> {}
 
-@:coreType abstract GridLineType
-from PresentationAttributesFor<LineElement> from ReactFragment
-from Any->SVGElement from Bool {}
+typedef GridLineType = EitherType<
+	PresentationAttributesFor<LineElement>,
+	ReactFragment,
+	Any->ReactFragment,
+	Bool
+>;

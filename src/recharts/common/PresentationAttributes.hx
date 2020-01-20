@@ -10,11 +10,11 @@ import js.html.svg.SVGElement;
 import react.types.dom.SVGAttributes;
 
 typedef PresentationAttributes = {
-	> DOMAttributes<SVGElement>,
+	> DOMAttributesWithProps<SVGElement>,
 	> SVGAttributes<SVGElement>,
 }
 
 typedef PresentationAttributesFor<TElement:DOMElement> = {
-	> DOMAttributes<TElement>,
+	> DOMAttributesWithProps<TElement>,
 	> SVGAttributes<TElement>,
 }

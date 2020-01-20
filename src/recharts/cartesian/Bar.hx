@@ -70,5 +70,9 @@ typedef BarProps = ForcedOverride<PresentationAttributesFor<PathElement>, {
 @:jsRequire('recharts', 'Bar')
 extern class Bar extends ReactComponentOfProps<BarProps> {}
 
-@:coreType abstract RectangleShapeType
-from ReactFragment from Any->ReactFragment from RectangleProps from Bool {}
+typedef RectangleShapeType = EitherType<
+	RectangleProps,
+	ReactFragment,
+	Any->ReactFragment,
+	Bool
+>;

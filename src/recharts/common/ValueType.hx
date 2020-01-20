@@ -1,4 +1,7 @@
 package recharts.common;
 
-@:coreType
-abstract ValueType from String from Float from Array<StringOrFloat> {}
+typedef ValueType = EitherType<
+	Array<StringOrFloat>,
+	String,
+	Float
+>;

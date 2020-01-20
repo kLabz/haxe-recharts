@@ -5,8 +5,6 @@ package recharts.cartesian;
 	https://github.com/recharts/recharts/blob/9a38bec/src/cartesian/Scatter.tsx
 */
 
-import js.html.svg.SVGElement;
-
 import recharts.cartesian.XAxis.XAxisProps;
 import recharts.cartesian.YAxis.YAxisProps;
 import recharts.cartesian.ZAxis.ZAxisProps;
@@ -71,13 +69,10 @@ typedef ScatterProps<TData> = ForcedOverride<PresentationAttributes, {
 @:jsRequire('recharts', 'Scatter')
 extern class Scatter<TData> extends ReactComponentOfProps<ScatterProps<TData>> {}
 
-@:coreType abstract ScatterLine
-from ReactFragment from Any->SVGElement from CurveProps from Bool {}
+typedef ScatterLine = EitherType<CurveProps, ReactFragment, Any->ReactFragment, Bool>;
+typedef SymbolsType = EitherType<SymbolsProps, ReactFragment, Any->ReactFragment>;
 
 @:enum abstract ScatterLineType(String) #if recharts_enum_from_string from String #end {
 	var Fitting = 'fitting';
 	var Joint = 'joint';
 }
-
-@:coreType abstract SymbolsType
-from ReactFragment from Any->ReactFragment from SymbolsProps {}

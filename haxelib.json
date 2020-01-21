@@ -1,7 +1,7 @@
 {
   "name": "recharts",
   "description": "A composable charting library built on React components",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "releasenote": "Initial release",
   "url": "https://github.com/kLabz/haxe-recharts",
   "license": "MIT",

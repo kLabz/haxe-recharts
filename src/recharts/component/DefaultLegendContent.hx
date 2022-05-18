@@ -47,6 +47,6 @@ typedef DefaultLegendContentProps<TPayload, TValue, TID> = {
 	@:optional var onMouseLeave:TypedRechartsHandler<LegendPayload<TPayload, TValue, TID>, DOMElement, MouseEvent<DOMElement>>;
 }
 
-@:jsRequire('recharts/component/DefaultLegendContent', 'DefaultLegendContent')
+@:jsRequire('recharts/es6/component/DefaultLegendContent', 'DefaultLegendContent')
 extern class DefaultLegendContent<TPayload, TValue, TID>
 extends ReactComponentOfProps<DefaultLegendContentProps<TPayload, TValue, TID>> {}

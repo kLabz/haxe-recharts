@@ -31,6 +31,6 @@ typedef DefaultTooltipContentProps<TValue:ValueType, TName:NameType> = {
 	@:optional var itemSorter:TooltipPayload<TValue, TName>->StringOrFloat; // ?!
 }
 
-@:jsRequire('recharts/component/DefaultTooltipContent', 'DefaultTooltipContent')
+@:jsRequire('recharts/es6/component/DefaultTooltipContent', 'DefaultTooltipContent')
 extern class DefaultTooltipContent<TValue:ValueType, TName:NameType>
 extends ReactComponentOfProps<DefaultTooltipContentProps<TValue, TName>> {}
